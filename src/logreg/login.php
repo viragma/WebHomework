@@ -1,5 +1,6 @@
 <?php
 //print_r($_POST);
+session_start();
 if(isset($_POST['username']) && isset($_POST['password'])) {
 
     try {
@@ -16,26 +17,20 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         $sth->execute(array(':username' => $_POST['username'], ':password' => sha1($_POST['password'])));
 
         $row = $sth->fetch(PDO::FETCH_ASSOC);
+
+        if($row){
+            $_SESSION['ln']= $row['lastname'];
+            $_SESSION['fn']= $row['firstname'];
+            $_SESSION['login'] = $_POST['username'];
+        }
+        if(isset($row) && !$row){
+            echo "<h2>A bejelentkezés nem sikerült!</h2>";
+            session_unset();
+        }
+
     }
     catch (PDOException $e) {
         echo "Hiba: ".$e->getMessage();
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Belépés</title>
-    <meta charset="utf-8">
-</head>
-<body>
-<?php if(isset($row)) { ?>
-    <?php if($row) { ?>
-        <h1>Bejelentkezett: <strong><?= $row['firstname']." ".$row['lastname'] ?></strong> (<?= $row['username'] ?>)</h1>
-    <?php } else { echo $row?>
-        <h1>A bejelentkezés nem sikerült!</h1>
-        <a href="login.html" >Próbálja újra!</a>
-    <?php } ?>
-<?php } ?>
-</body>
-</html>
