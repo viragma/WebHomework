@@ -1,6 +1,7 @@
 <?php
 
-include('./Project/includes/config.inc.php');
+
+include('./includes/config.inc.php');
 
 //$keres = current($oldalak);
 $keres = $oldalak['/'];
@@ -15,4 +16,7 @@ if (isset($_GET['oldal'])) {
     }
 }
 
-include('./Project/templates/navbar.tpl.php');
+include('./templates/index.tpl.php');
+
+
+?>
