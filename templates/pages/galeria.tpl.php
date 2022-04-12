@@ -1,5 +1,5 @@
 
-<?php  include ("./logicals/galleria.php");?>
+<?php  include ("./logicals/galeria.php");?>
 
 
 <?php

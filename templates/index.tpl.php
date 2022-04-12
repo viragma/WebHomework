@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/style.css" type="text/css">
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/registcheck.js"></script>
+    <script type="text/javascript" src="/js/kapcsolatcheck.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -69,20 +70,28 @@
 
 
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center ">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-        </div>
+        <div class=" col-sm-2 sidenav visible-xs-block, hidden-xs">
+    <ul class="navbar-nav">
+            <?php foreach ($sidepage as $url => $oldal) { ?>
+                <?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
+                    <li<?= (($oldal == $keres) ? ' class="active"' : '') ?>>
+                        <p> <a href="<?= ($url == '/') ? '.' : ('?oldal=' . $url) ?>">
+                                <?= $oldal['szoveg'] ?></a></p>
+                    </li>
+                <?php } ?>
+            <?php } ?>
+
+    </ul>
+            </div>
         <div class="col-sm-8 text-left">
 
             <div id="content">
                 <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
             </div>
         </div>
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-2 sidenav visible-xs-block, hidden-xs">
 
         </div>
     </div>
