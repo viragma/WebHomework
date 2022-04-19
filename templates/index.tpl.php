@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand">KS</div>
+            <div class="navbar-brand">KA</div>
 
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -73,15 +73,7 @@
 <div class="container-fluid text-center ">
     <div class="row content">
         <div class=" col-sm-2 sidenav visible-xs-block, hidden-xs">
-    <ul class="navbar-nav">
-            <?php foreach ($sidepage as $url => $oldal) { ?>
-                <?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
-                    <li<?= (($oldal == $keres) ? ' class="active"' : '') ?>>
-                        <p> <a href="<?= ($url == '/') ? '.' : ('?oldal=' . $url) ?>">
-                                <?= $oldal['szoveg'] ?></a></p>
-                    </li>
-                <?php } ?>
-            <?php } ?>
+
 
     </ul>
             </div>

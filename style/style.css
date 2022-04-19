@@ -3,21 +3,27 @@ table, th, td {
 }
 
 .navbar {
+    background-color: darkgreen;
     padding: 0;
     margin-bottom: 0;
     border-radius: 0;
 
 }
-
+.navbar-inverse .navbar-nav>li>a {
+    color: #e4e4e4;
+}
+.navbar-inverse .navbar-nav>.active>a{
+    background-color: #008000;
+}
 .navbar-nav>li>div {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #9d9d9d;
+    color: #e4e4e4;
 }
 .jumbotron{
     padding-top: 20px;
-    background-color: #757575;
+    background-color: #287428d1;
     margin-bottom: 0;
     color: aliceblue;
 }
@@ -40,7 +46,9 @@ footer {
 }
 
 
-
+p{
+    text-align: justify;
+}
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
