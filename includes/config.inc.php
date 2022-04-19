@@ -1,6 +1,6 @@
 <?php
 $ablakcim = array(
-    'cim' => 'Kecske Simogato',
+    'cim' => 'Kerekerdő Alapítvány',
 );
 
 $fejlec = array(

@@ -1,9 +1,10 @@
 
 <h2>Köszöntés</h2>
 
-<object width="300" height="240" data="http://www.youtube.com/v/Ahg6qcgoay4" type="application/x-shockwave-flash"><param name="src" value="http://www.youtube.com/v/Ahg6qcgoay4" /></object>
-<video width="300" height="240" controls>
-    <source src="movie.mp4" type="video/mp4">
+<iframe width="350" height="200" src="https://www.youtube.com/embed/uasnqRlj4lA">
+</iframe>
+<video width="350" height="200" controls>
+    <source src="/video/vid1.mp4" type="video/mp4">
 </video>
 <h3>Mi a Lorem Ipsum?</h3>
 <p>A Lorem Ipsum egy egyszerû szövegrészlete, szövegutánzata a betûszedõ és nyomdaiparnak. A Lorem Ipsum az 1500-as évek óta standard szövegrészletként szolgált az iparban; mikor egy ismeretlen nyomdász összeállította a betûkészletét és egy példa-könyvet vagy szöveget nyomott papírra, ezt használta. Nem csak 5 évszázadot élt túl, de az elektronikus betûkészleteknél is változatlanul megmaradt. Az 1960-as években népszerûsítették a Lorem Ipsum részleteket magukbafoglaló Letraset lapokkal, és legutóbb softwarekkel mint például az Aldus Pagemaker.</p>
