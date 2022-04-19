@@ -75,7 +75,7 @@
         <div class=" col-sm-2 sidenav visible-xs-block, hidden-xs">
 
 
-    </ul>
+
             </div>
         <div class="col-sm-8 text-left">
 
@@ -83,9 +83,7 @@
                 <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
             </div>
         </div>
-        <div class="col-sm-2 sidenav visible-xs-block, hidden-xs">
 
-        </div>
     </div>
 </div>
 
