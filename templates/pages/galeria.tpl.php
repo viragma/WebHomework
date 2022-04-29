@@ -13,7 +13,7 @@ if (!empty($uzenet))
 ?>
 
 
-    <div class="container">
+    <div class="container-fluid">
 
         <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Galéria</h1>
         <div> <?php if(isset($_SESSION['login'])) { ?><strong><?= include ("templates/pages/kepfeltoltes.tpl.php");?></strong><?php }
